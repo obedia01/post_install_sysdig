@@ -18,5 +18,6 @@ echo IBM_REGION:$IBM_REGION
 #./create_sysdig_team.sh team_BP2I.json $IBM_REGION $GUID $AUTH_TOKEN
 
 TEAMID=$(./get_team_monitor_operations_id.sh $IBM_REGION $GUID $AUTH_TOKEN)
+echo TEAMID:$TEAMID
 
-TOKEN_SYSDIG_TOPIC=$3
+./creation_notificationChannel.sh $TEAMID $IBM_REGION $GUID $AUTH_TOKEN
