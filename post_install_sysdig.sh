@@ -9,3 +9,6 @@ AUTH_TOKEN=$(./get_iam_token.sh $APIKEY)
 
 echo APIKEY:$APIKEY
 echo AUTH_TOKEN:$AUTH_TOKEN
+
+IBM_REGION=$2
+./create_sysdig_team.sh team_OPS.json $IBM_REGION $GUID $AUTH_TOKEN
